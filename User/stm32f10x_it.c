@@ -151,14 +151,7 @@ void SysTick_Handler(void)
   */
 void DEBUG_USART_IRQHandler(void)
 {
-  uint8_t temp;
-
-  if (USART_GetITStatus(DEBUG_USARTx, USART_IT_RXNE) != RESET)
-  {
     /* TODO */
-    temp = USART_ReceiveData(DEBUG_USARTx);
-    USART_SendData(DEBUG_USARTx, temp);
-  }
 }
 
 /**
